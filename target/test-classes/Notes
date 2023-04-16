@@ -1,0 +1,142 @@
+Features= maps where feature files are located in our framework
+glue= maps where class files are located in our framework
+dryRun= it checks every step
+
+Given: is a pre-condition
+When: is an action
+And: is an initial statement
+Then: is the end result
+
+In Cucumber, we have multiple keyWords
+feature: is a keyword
+Scenario: is a keyword
+Given: is a keyword
+When: is a keyword
+And: is a keyword
+Then: is a keyword
+but: is a keyword
+backGround: is a keyword
+Scenario-Outline: is a keyword
+
+
+Runner File:
+a Runner file gives you the option to select which test Scenarios you want to execute.
+it also has other options like dryRun=true/false.
+if dry run is set to true (dryRun=true) is will just give you the step implementation or generate the code for
+implementing the steps in your feature file
+When dryRun is set to false (dryRun=false) then it will run your code through TestRunner
+
+glue: in glue you mention the package name where your stepDefinitions are.
+
+features: path to your feature file
+
+tags: which particular Scenarios to execute from a feature file
+
+Cucumber Framework:
+ is a structure in which you follow to organise your test cases.
+
+ resources: this is where we write everything that's not code related, for example Gherkin language which is in Features folder
+ which can also have multiple feature files. We can also have a Config folder which can have a config.properties file
+ but it's not compulsory to have a Config folder or a config.properties file.
+
+
+ Utils also known as Utilities are codes that you need for your test cases.
+
+ Common methods is a class that will contains all the methods that will be reused multiple times on all your test
+ cases. For Example:
+ 1. Open Browser
+ 2. Close Browser
+ 3. Click
+ 4. Wait
+ 5. SendKeys
+ 6. TakeScreenshot
+ 7. Maximize window
+
+ resources: all the non java part are her.
+ in resources folder we have directories  like:
+ Feature
+ Config
+ TestData
+
+
+Config Reader: this are methods that are not commonly or frequently used. ConfigReader is used to read the
+configuration file you put in methods.
+in the Config folder you have files like:
+config.properties
+browser credentials
+
+Constants: We put anything that will not be changing.
+
+Runner: consists of files like Smoke Runner and regression Runner
+
+Framework: Organization of your framework in a way that makes your code reusable, efficient and easy to understand.
+
+Step Definitions: this is where all your java codes are located for all your test cases.
+
+========================parameterization======================================
+
+Parameterization: when you execute the same test cases with multiple data.
+
+1. parameterization can be achieved through scenario outline.
+2. data-driven testing: whenever you fetch/read data from external source into your code.
+
+Hooks: are used to make sure that all browsers are closed.
+
+Background keyword: we use background keyword to clip the common steps in a feature file
+
+
+#HOOKS: For defining Pre and Post steps in any Cucumber Framework
+  #       :  This is always created inside the StepDefinitions folder
+  #       : This class cannot be inherited but it can extends another class
+  #       : Hooks will take care of Pre and Post conditions irrespective of what goes on between the test steps
+
+  #  Background: its the clubbing of common steps in different scenarios of a feature file till flow is broken.Feature:
+  # 1. Hard Code
+  # 2. Config file: we created ConfigReader to load the properties file and to read it from there
+  # ------Cucumber itself provides multiple option through which we can feed data from feature file into step Definition
+
+  #  3.  Regular Expressions: put the data in double quotes [""]
+
+  # Regular expression is also known as Cucumber expression.
+  # 4. Scenario Outline
+  # provides you an alternative to data driven testing
+  # Also supports parameterization.
+  #==============================Parameterization======================================
+# Executing the same test case with multiple data
+
+Runner class creates a link between the Step definitions and the Feature files.
+
+
+==================================Page Object Model=================================================
+
+Page Object Model is some kind of repository that stores your WebElements.
+Page Object Model: An Object Repository (it store or holds all the WebElements specific to a particular page)
+
+
+================================================================================================================
+
+Cucumber Expression: [ Limited set of test data]
+Scenario Outline: [ Parameterization], [ Data Driven Testing] [Browser will open and close a number of time we have test data in Examples table].
+Data Table:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
