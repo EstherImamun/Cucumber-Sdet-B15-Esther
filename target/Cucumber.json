@@ -1,17 +1,1 @@
-[{"line":1,"elements":[{"start_timestamp":"2023-04-15T09:52:25.495Z","before":[{"result":{"duration"
-:5825281700,"status":"passed"},"match":{"location":"StepDefinitions.Hooks.preConditions()"}}],"line":4,"name":
-"Adding a new Employee","description":"","id":"employee;adding-a-new-employee","after":[{"result":{"duration":199466000,
-"status":"passed"},"match":{"location":"StepDefinitions.Hooks.postConditions()"}}],"type":"scenario","keyword":"Scenario",
-"steps":[{"result":{"duration":307178100,"status":"passed"},"line":6,"name":"user enters valid email and valid password",
-"match":{"location":"StepDefinitions.Login.user_enters_valid_email_and_valid_password()"},"keyword":"When "},{"result":
-{"duration":1553942000,"status":"passed"},"line":7,"name":"click on login button","match":{"location":
-"StepDefinitions.Login.click_on_login_button()"},"keyword":"And "},{"result":{"duration":2942763200,"status":"passed"},
-"line":8,"name":"user clicks on PIM option","match":{"location":"StepDefinitions.AddEmployee.user_clicks_on_pim_option()"},
-"keyword":"When "},{"result":{"duration":1709230600,"status":"passed"},"line":9,"name":"user clicks on add employee button",
-"match":{"location":"StepDefinitions.AddEmployee.user_clicks_on_add_employee_button()"},"keyword":"And "},{"result":{"duration"
-:443812000,"status":"passed"},"line":10,"name":"user enters firstname and middlename and lastname","match":{"location":
-"StepDefinitions.AddEmployee.user_enters_firstname_and_middlename_and_lastname()"},"keyword":"And "},{"result":{"duration"
-:1654490700,"status":"passed"},"line":11,"name":"user clicks on save button","match":{"location":
-"StepDefinitions.AddEmployee.user_clicks_on_save_button()"},"keyword":"And "}],"tags":[{"name":"@testcase2"},
-{"name":"@smoke"}]}],"name":"Employee","description":"","id":"employee","keyword":"Feature","uri":
-"file:src/test/resources/Features/AddEmployee.feature","tags":[]}]
+[{"line":1,"elements":[{"line":3,"name":"","description":"","type":"background","keyword":"Background","steps":[{"result":{"duration":3850393500,"status":"passed"},"line":4,"name":"a JWT is generated","match":{"location":"APIStepDefinitions.GenerateTokenSteps.a_jwt_is_generated()"},"keyword":"Given "}]},{"start_timestamp":"2023-11-24T14:25:24.493Z","line":41,"name":"updating the employee via API call","description":"","id":"api-workflow-for-hrms;updating-the-employee-via-api-call","type":"scenario","keyword":"Scenario","steps":[{"result":{"duration":39999000,"status":"passed"},"line":42,"name":"a request is prepared to update an employee","match":{"location":"APIStepDefinitions.APIWorkflowSteps.a_request_is_prepared_to_update_an_employee()"},"keyword":"Given "},{"result":{"duration":637988200,"status":"passed"},"line":43,"name":"a PUT call is made to update an employee","match":{"location":"APIStepDefinitions.APIWorkflowSteps.a_put_call_is_made_to_update_an_employee()"},"keyword":"When "},{"result":{"duration":49454000,"status":"passed"},"line":44,"name":"the status code of updated employee is 200","match":{"arguments":[{"val":"200","offset":39}],"location":"APIStepDefinitions.APIWorkflowSteps.the_status_code_of_updated_employee_is(java.lang.Integer)"},"keyword":"Then "}],"tags":[{"name":"@updateemployee"}]}],"name":"API workflow for HRMS","description":"","id":"api-workflow-for-hrms","keyword":"Feature","uri":"file:src/test/resources/Features/APIWorkflow.feature","tags":[]}]

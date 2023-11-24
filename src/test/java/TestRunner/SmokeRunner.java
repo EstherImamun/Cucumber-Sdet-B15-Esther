@@ -5,11 +5,11 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src\\test\\resources\\Features",
+@CucumberOptions(features = "src/test/resources/Features",
         glue = "StepDefinitions",
         dryRun = false,
-       tags = " @testcase2",
-        plugin = {"pretty", "html:target/Cucumber.html","json:target/Cucumber.json"})// you can tag either one tag or multiple tags depends on how many test
+        tags = "@database",
+        plugin = {"pretty", "html:target/Cucumber.html","json:target/Cucumber.json", "rerun:target/failed.txt"})// you can tag either one tag or multiple tags depends on how many test
 public class SmokeRunner {                // cases you want to run
 }
 

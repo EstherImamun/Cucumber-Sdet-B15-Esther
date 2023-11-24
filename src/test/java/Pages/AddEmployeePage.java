@@ -25,4 +25,12 @@ public class AddEmployeePage extends CommonMethods {
     public  WebElement lastNameTextBox;
     @FindBy(id="btnSave")
     public  WebElement saveBtn;
+
+    @FindBy(id="employeeId")
+    public WebElement empIdLocator;
+
+
+
+
+
 }

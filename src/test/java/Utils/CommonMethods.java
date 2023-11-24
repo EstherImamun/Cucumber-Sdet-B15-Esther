@@ -9,6 +9,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -21,17 +22,23 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 
 public class CommonMethods extends PageInitializer {
     public static WebDriver driver;
-
     public static void openBrowserAndLaunchApplication() {
-        ConfigReader.readProperties();
+       Properties properties= ConfigReader.readProperties();
 
         String browserType = ConfigReader.getPropertyValue("browserType");
         switch (browserType) {
             case "Chrome":
-                driver = new ChromeDriver();
+                ChromeOptions ops = new ChromeOptions();
+                ops.addArguments("--no-sandbox");
+                ops.addArguments("--remote-allow-origins=*");
+                if(ConfigReader.getPropertyValue("Headless").equals("true")){
+                    ops.addArguments("--headless=new");
+                }
+                driver = new ChromeDriver(ops);
                 break;
             case "Firefox":
                 driver = new FirefoxDriver();
@@ -93,7 +100,7 @@ public class CommonMethods extends PageInitializer {
 
     //===========================SCREENSHOT====================================================
 
-    public static void takeScreenshot(String imageName) {
+    public static byte[] takeScreenshot(String imageName) {
         // this casts the webdriver instance driver to TakeScreenshot Interface
         TakesScreenshot ts = (TakesScreenshot) driver;
 
@@ -109,6 +116,7 @@ public class CommonMethods extends PageInitializer {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        return picBytes;
     }
 
     public static String getTimeStamp(String pattern) {

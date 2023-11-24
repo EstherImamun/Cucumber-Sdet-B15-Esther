@@ -121,6 +121,62 @@ Data Table:
 
 
 
+----------------------------------------Database/Backend Automation--------------------
+
+Three things needed to automate backend
+1. Address of database [url of the database]
+2. proper name of the data base [Correct name of the database]
+3. access to database [Username of the database] for example: syntaxhrm_mysql in sql class--> that's the name of the database
+----------------------------------------------------------------------------------------------------------------------
+
+JDBC notes -
+recap -
+mysql connector java is the dependency we have added
+
+We need 3 things to work with database
+
+1. Address of DB
+2. Name of DB
+3. Username, Password  -
+
+Connection class - to establish the connection with DB
+Make a statement - it allows us to send the query to the DB
+ResultSet - the result will be stored in it's object
+
+rset.next() - to shift the cursor on to the next line/row
+
+ResultSetMetadata - it contains the information about the result such as how many columns are there,
+how many rows, name of columns/rows etc.
+
+---------------------------------------------------------------------------------------------------
+
+To integrate with framework, we will pass url, username and password in config.property file
+
+
+
+
+
+
+in order to integrate our db in framework, we create dbutility class
+
+select emp_firstname, emp_lastname
+from hr_hs_employee
+where employee_id='12345';
+
+we have added a scenario in addemployee feature file
+we have added steps in add employee steps page
+we have added tag of the scenario in runner class
+
+scenario is to capture the employee id from ui and verify it with the database.
+for this we have added scenario in feature file and added in step definitions
+then we are verifying firstname, middlename, lastname etc.. one by one because we cannot compare bunch
+of values in one attempt.
+
+
+
+
+
+
 
 
 
