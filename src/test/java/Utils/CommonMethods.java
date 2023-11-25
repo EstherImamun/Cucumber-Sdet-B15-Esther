@@ -27,7 +27,8 @@ import java.util.Properties;
 public class CommonMethods extends PageInitializer {
     public static WebDriver driver;
     public static void openBrowserAndLaunchApplication() {
-       Properties properties= ConfigReader.readProperties();
+
+        ConfigReader.readProperties();
 
         String browserType = ConfigReader.getPropertyValue("browserType");
         switch (browserType) {
