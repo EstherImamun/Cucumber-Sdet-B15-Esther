@@ -30,7 +30,7 @@ public class CommonMethods extends PageInitializer {
 
         ConfigReader.readProperties();
 
-        String browserType = ConfigReader.getPropertyValue("browserType");
+        String browserType = ConfigReader.getPropertyValue("browserType");//
         switch (browserType) {
             case "Chrome":
                 ChromeOptions ops = new ChromeOptions();

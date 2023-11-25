@@ -1,0 +1,125 @@
+
+  Class 6
+
+  Recap -
+  how to run collection -
+as per the requirement, we can include/exclude the api request and can run via collection to get the results in one time.
+
+Environments - we can select environment in postman - we provide variable of the env along with base URL.
+
+Globals - in globals, we usually pass our end points and token.
+
+postman has built-in assertion library called chai -
+
+functions of assertions can be found under snippets column in test.
+
+Majorly - we need to focus on these assertions -
+API status code
+response body (any key, any value)
+response headers (any header)
+
+Multi - treading -
+
+
+when you're asked if you're a functional tester, the answer is yes...
+
+
+REST assured API Library - is the name of the library which we use to perform API automation. it is different
+from REST web services/REST API which is basically a service that is less secured but faster than SOAP web services.
+
+REST web service - the REST web service allows data to be sent in JSON format/object.
+JSON object consists of key and value pairs.
+
+REST assured is DSL (domain specific language) which is a java library used to automate REST API.
+
+REST assured library follows BDD (behavioural driven development) approach.
+
+In Cucumber
+Given - pre-condition
+When - Actions
+Then - result/expected output
+
+in REST assured API
+Given - preparing the request
+When - make a call/send the request/ hitting the endpoint
+Then - verification/assertion
+
+
+In postman -
+base URI = base url + endpoint
+
+in rest assured api library
+base URI = base URL
+
+in order to verify the body in REST API automation, we have to use the;
+hamcrest matchers - hamcrest is a popular framework that helps us to create matcher objects.
+it is used for writing tests and performs testing in programming. Hamcrest
+is mainly used with other frameworks like junit.
+
+Hamcrest matchers -
+class that contains methods to perform assertions.
+
+difference between JsonPath vs jsonPath()?
+JsonPath is a class
+jsonPath() is a method that belongs to JsonPath class
+
+
+
+-----------------------------------class 7----------------------------------------------
+
+ integrated Rest assured API library with framework
+
+ BDD -
+ given - prepare the request
+ when - make a call/ hitting the endpoint
+ then - verification/assertion
+
+ base URI = base URL
+because given keyword is used to create a request
+and when keyword is used to send the request. that's why both cannot be in the base URI.
+
+
+
+ // in homework, create a method to get all employee status and job title...
+
+
+ ----------------------------------------- Class 8 -----------------------------------------
+
+ Recap -
+
+ @Test - from Junit to execute API test cases in hard coded examples class.
+
+ to integrate API in framework, we have to write API scenarios in feature file
+
+ to generate token, we have created generate token steps class.
+
+
+ -----------------------------------------class 9----------------------------------------------------------------
+
+ Recap -
+
+ using different (json) payload to create an employee
+ we also created constants class to keep all the constants such as endpoint, headers, uri
+ created api payload constants class - to send all the payload from the methods of this class
+ we also retrieved the created employee and verify all the details of it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

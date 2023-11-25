@@ -1,6 +1,4 @@
 package API;
-
-import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -11,9 +9,9 @@ import org.junit.runners.MethodSorters;
 import static io.restassured.RestAssured.given;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class Homework {
+public class HomeworkTest {
 
-    String baseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api";
+   // String baseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api";
     String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTk1Mjc5ODYsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5OTU3MTE4NiwidXNlcklkIjoiNjA2NCJ9.oRAIyNqcClp7qO0Qd3ghRGxwBWBnCdqlDnvPUZfmZN0";
 
 
@@ -32,7 +30,7 @@ public class Homework {
 
 
     @Test
-    public void bgetJobTitle(){
+    public void bgetJobTitle(){ // this is my homework
         RequestSpecification preparedRequest = given().
                 header("Content-Type", "applicaiton/json").
                 header("Authorization", token);
